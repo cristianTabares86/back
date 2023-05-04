@@ -3,8 +3,9 @@ const { URL_API } = process.env;
 
 const getVideoGamesAPI = async () => {
     try {
-        let responseAPI = await axios.get(`${URL_API}`);
         console.log("estoy en el controller")
+        let responseAPI = await axios.get(`${URL_API}`);
+        
         console.log(responseAPI.data)
         const gameIdsAndNames = responseAPI.data.results.map(p => ({ 
                 id: p.id,
