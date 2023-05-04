@@ -4,7 +4,7 @@ const { URL_API } = process.env;
 const getVideoGamesAPI = async () => {
     try {
         console.log("estoy en el controller")
-        let responseAPI = await axios.get(`${URL_API}`);
+        let responseAPI = await axios.get('https://api.rawg.io/api/games?page_size=10&key=6df927ecdff443ffa74507df2223a6ad&page_size=40');
         
         console.log(responseAPI.data)
         const gameIdsAndNames = responseAPI.data.results.map(p => ({ 
