@@ -7,7 +7,7 @@ const getPostVideogamesIntoDBHandlers = async (req, res) => {
     console.log("estoy en el handler")
     try {
         let responseAPI = await getVideoGamesAPI();
-        console.log(responseAPI)
+        console.log(responseAPI.data)
         responseAPI.forEach(p => {
             console.log("estoy en el handler en eeee")
             console.log(p)
